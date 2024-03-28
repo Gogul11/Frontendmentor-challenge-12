@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tips.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <title>Tips Calculator</title>
+</head>
+<body>
+    <div id="main">
+
+        <div id="input">
+
+            <div id="bill">
+                <p>Bill</p>
+                <input type="text" id="amt">
+            </div>
+            
+            <div id="select">
+                <p>Select Tip %</p>
+
+                <div id="buttons">
+                    <button type="button" id="btn1" onclick="tip1()" >5%</button>
+                    <button type="button" id="btn2" onclick="tip2()" >10%</button>
+                    <button type="button" id="btn3" onclick="tip3()" style="background-color: hsl(172, 67%, 45%); color: hsl(183, 100%, 15%);">15%</button>
+                    <button type="button" id="btn4" onclick="tip4()" >25%</button>
+                    <button type="button" id="btn5"  onclick="tip5()">50%</button>
+                    <input type="text" id="custom"  value="0" placeholder="Custom">
+                </div>
+            </div>
+
+            <div id="no">
+                <p>No of people</p>
+                
+                <input type="text" id="num">
+            </div>
+
+        </div>
+
+        <div id="output">
+            <div id="disp">
+                <div id="tipamt">
+                    <div>
+                        <p id="head">Tip Amout</p>
+                        <p>/ person</p>
+                    </div>
+
+                    <div id="tot">
+                        <p id="dispamt1" class="final"> $ <span id="sp1"></span></p>
+                    </div>
+                </div>
+                <div id="totamt">
+                    <div>
+                        <p id="head">Total</p>
+                        <p>/ person</p>
+                    </div>
+
+                    <div id="tot">
+                        <p id="dispamt2" class="final1">$<span id="sp2"></span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="submit">
+                <button type="submit" id="sub" onclick="calculate()">submit</button>
+            </div>
+            <div id="reset">
+                <button type="reset" onclick="reset()">RESET</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="tips.js"></script>
+</body>
+</html>
